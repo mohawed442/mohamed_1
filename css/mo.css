@@ -1,0 +1,249 @@
+:root{
+
+    --dark : #19283f ;
+    --green: #33d1cc ;
+    --yellow:#ffc400 ;
+    --red : #ff3150 ;
+    --lead:#eff7fa ;
+}
+body{
+    height: 2000px;
+    margin: 0;
+}
+a , li{
+    text-decoration: none;
+    list-style: none;
+    color: white;
+} 
+
+.main-btn{
+    background-color: var(--red);
+    color: var(--yellow);
+}
+.main-btn:hover{
+    background-color: var(--red);
+}
+.main-title::after{
+    content: "";
+    width: 150px;
+    height: 2px;
+    background-color: var(--green);
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.fa-circle-nodes{
+    color: var(--yellow);
+}
+
+
+
+.navbar {
+    background-color: var(--dark);
+}
+.navbar ul li{
+    position: relative;
+}
+.navbar ul li::before
+{
+    top:0;
+    right: 0;
+}
+.navbar ul li::after , .navbar ul li::before {
+    content: "";
+    margin:0 1rem;
+    width: 0;
+    height:2px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    background-color: var(--green);
+    transition: 0.8s;
+}
+.navbar ul li:hover::after , .navbar ul li:hover::before{
+    width:55px;
+}
+@media  (max-width: 992px) {
+    .navbar ul li:hover::before {
+        width: 0;
+    }
+    .navbar ul li:hover::after {
+        margin:0 0.5rem;
+        
+
+    }
+}
+
+.navbar .navbar-brand{
+    color: var(--yellow);
+}
+.navbar .navbar-brand:hover{
+    animation: colorChange 1s infinite alternate;
+}
+    @keyframes colorChange {
+        0% { color: red; }
+        20% { color: orange; }
+        100% { color: indigo; }
+    }
+
+.navbar .navbar-nav .nav-link {
+    color: white ;
+
+}
+.navbar .navbar-nav .nav-link.active ,
+.navbar .navbar-nav .nav-link:focus ,
+.navbar .navbar-nav .nav-link:hover{
+    color: var(--green);
+}
+
+.navbar .search {
+    border-left: 1px solid var(--green);
+    color: var(--green);
+
+}
+.navbar a .navbar-toggler{
+    color: white;
+    font-size: 25px;
+    border-color: white;
+    box-shadow: none;
+}
+
+
+.navbar .navbar-toggler[aria-expanded="true"]{
+    border-color: var(--green);
+    color: var(--green);
+}
+.landing{
+    background-color: var(--dark);
+    min-height: calc(100vh);
+}
+
+
+
+.features .icon-holder{
+    height: 200px;
+}
+.features .icon-holder i{
+    left: 50%;
+    transform: translate(-50%);
+    
+}
+.features .icon-holder .number{
+    font-size: 12rem;
+    color: var(--lead);
+}
+.features .icon-holder .icon{
+    color: var(--green);
+}
+.features .feat h4{
+    color: var(--yellow);
+}
+
+
+.our-work{
+    background-color: var(--lead);
+}
+.our-work ul .active{
+    background-color: var(--red);
+    color: var(--yellow);
+}
+.our-work ul li {
+    padding: 0.5rem  1.5rem;
+    cursor: pointer;
+}
+.our-work ul li:not(.active):hover{
+    color: var(--yellow);
+}
+
+
+
+.our-work .box{
+    padding: 5px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+.our-work .box::before{
+    content:attr(data-work) ;
+    position: absolute;
+    background-color: #33d1cc9f;
+    width: calc(100% - 10px );
+    height: calc(100% - 10px );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform:  rotate(-180deg) translatex(calc(110%));
+    transition: 0.7s;
+
+
+}
+.our-work .box:hover::before{
+    transform:translate(0) rotate(0);
+}
+
+
+
+.stuff .description{
+    max-width: 500px;
+}
+
+
+
+.team{
+    background-color: var(--lead);
+}
+.team h2{
+    color: var(--yellow);
+}
+.team .box{
+    cursor: pointer;
+}
+.team .box h4{
+    background-color: var(--green);
+    color: var(--lead);
+    transition: 0.5s;
+}
+.team .box:hover h4 {
+    color: var(--yellow);
+    background-color: #ff3150;
+    cursor: pointer;
+}
+.team .box img{
+    min-height: 160px;
+}
+
+
+
+.SubScribe {
+    background-color: var(--yellow);
+}
+.SubScribe input[type="text"]{
+    color: white;
+    border: none;
+    border-bottom: 1px  solid white ;
+}
+.SubScribe input[type="text"]:focus{
+    outline: none;
+}
+.SubScribe::placeholder{
+    color: white;
+}
+.SubScribe input[type="submit"]{
+    background-color: var(--dark);
+    color: var(--yellow);
+}
+
+
+
+.foter {
+    background-color: var(--dark);
+    
+}
+
+.thre{
+    color: white;
+}
+.foter .three .bottom-three{
+    background-color: var(--red);
+}
